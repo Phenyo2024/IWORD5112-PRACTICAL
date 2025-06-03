@@ -1,70 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fast Grab and Go</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      background-image: url('your-background-image.jpg'); /* Replace with your image path */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Header Section */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 15px 30px;
-    }
-
-    .logo {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .logo h1 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .logo p {
-      margin: 0;
-      font-size: 14px;
-      color: #555;
-    }
-
-    /* Navigation */
-    nav ul {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      font-weight: bold;
-      color: #333;
-      padding: 8px 12px;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ff6600;
-    }
-  </style>
+  <link rel="stylesheet" href="Styling.css" />
 </head>
 <body>
   <!-- Header Section -->
@@ -73,6 +13,90 @@
       <h1>Fast Grab and Go</h1>
       <p>Your quick and easy food destination!</p>
     </div>
+    <!-- Countdown Timer Section -->
+<div id="deal-section">
+  <h2>🔥 Flash Deal: <span class="highlight">20% Off All Drinks</span></h2>
+  <p class="subtext">Hurry! Offer ends in:</p>
+  <div id="countdown"></div>
+</div>
+
+<!-- Styles -->
+<style>
+  #deal-section {
+    max-width: 500px;
+    margin: 30px auto;
+    background: linear-gradient(to right, #ff7300, #fcb045);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  #deal-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .highlight {
+    background-color: #fff;
+    color: #ff7300;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+
+  .subtext {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  #countdown {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px 24px;
+    border-radius: 12px;
+    display: inline-block;
+  }
+
+  @media (max-width: 500px) {
+    #deal-section {
+      padding: 20px 10px;
+    }
+
+    #countdown {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  const deadline = new Date(Date.now() + 2 * 60 * 60 * 1000).getTime(); // 2 hours
+  const countdownEl = document.getElementById("countdown");
+
+  const x = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = deadline - now;
+
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownEl.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+
+    if (distance < 0) {
+      clearInterval(x);
+      countdownEl.innerHTML = "EXPIRED";
+      document.getElementById("deal-section").style.opacity = 0.5;
+    }
+  }, 1000);
+</script>
+
+
     <nav>
       <ul>
         <li><a href="home.html">Home</a></li>
@@ -84,36 +108,21 @@
   </header>
 
   <!-- Banner Image Section -->
-<div class="banner">
-  <img src="ChatGPT Image Apr 3, 2025, 10_00_34 PM.png"
-</div>
-<style>
-.banner {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.banner img {
-  width: 95%;
-  max-height: 250px;
-  object-fit: cover;
-  display: block;
-}
-</style>
+  <div class="banner">
+    <img src="ChatGPT Image Apr 3, 2025, 10_00_34 PM.png" alt="Promotional Banner">
+  </div>
 
   <!-- Main Content Section -->
   <main>
-    <!-- Home Section -->
     <section id="home">
       <h2>Welcome to Fast Grab and Go!</h2>
       <p>We provide fresh, fast, and delicious meals for people on the go.</p>
       <img src="sandwiches-and-drinks-2CEJ915.jpg" alt="A delicious snack ready to go">
     </section>
 
-    <!-- Details about Promotions or Specials -->
     <aside>
       <h3>Today's Special</h3>
-      <p>Grab a sandwich and drink combo for just R39.90 Offer valid today only.</p>
+      <p>Grab a sandwich and drink combo for just R39.90. Offer valid today only.</p>
     </aside>
   </main>
 
@@ -123,7 +132,6 @@
   </footer>
 </body>
 </html>
-
 
 
 

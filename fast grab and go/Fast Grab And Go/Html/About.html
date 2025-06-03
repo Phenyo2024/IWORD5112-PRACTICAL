@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosebank</title>
+  <style>
+    body {
+      background-color: brown;
+      padding: 50px;
+      margin: 10px;
+    }
+
+    table {
+      width: 100%;
+      padding: 10px;
+    }
+
+    td {
+      margin: 40px;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: blue; background-color: rgb(224, 181, 181); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    Today's Weather
+  </h1>
+
+  <p id="date"></p>
+  <p id="para1">This is a college</p>
+
+  <table id="firsttable" border="1">
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+    </tr>
+    <tr>
+      <td>Sipho</td>
+      <td>Orekeng</td>
+    </tr>
+    <tr>
+      <td>Mpho</td>
+      <td>HSBHSBHH</td>
+    </tr>
+  </table>
+
+  <a href="#">Click here</a>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const today = new Date().toDateString();
+      $('#date').text(today);
+    });
+  </script>
+</body>
+</html>

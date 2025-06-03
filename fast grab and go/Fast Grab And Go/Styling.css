@@ -1,0 +1,223 @@
+/* ================================ */
+/* Styles for About Us HTML Page   */
+/* ================================ */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  text-align: center;
+  background-color: darkgreen;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* Styles for Index HTML Page   */
+/* ============================= */
+
+body {
+  background-image: url('your-background-image.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Section */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px 30px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+/* Banner Section */
+.banner {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.banner img {
+  width: 95%;
+  max-height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+main section img {
+  width: 60%;
+  margin-top: 15px;
+}
+
+/* Aside Section */
+aside {
+  background: #fff3e0;
+  padding: 15px;
+  margin: 20px auto;
+  width: 60%;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* ============================================ */
+/* Styles for Products & Services HTML Page     */
+/* ============================================ */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: darkgreen;
+}
+
+header, nav, section, footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navigation Styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #ff6600;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background: #333;
+  border-radius: 5px;
+}
+
+/* Product & Service Sections */
+.product-list,
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.item {
+  flex: 1 1 calc(33.333% - 20px);
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+  background: #333;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+
+  
+
