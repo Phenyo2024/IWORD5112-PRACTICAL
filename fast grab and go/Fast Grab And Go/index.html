@@ -3,8 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fast Grab and Go</title>
+  <title>Fast Grab & Go | Fresh Daily Deals on Food & Drinks</title>
   <link rel="stylesheet" href="Styling.css" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Fast Grab & Go brings you quick, affordable meals and exclusive flash food deals updated daily. Get it fresh. Get it fast.">
+  <meta name="author" content="Fast Grab & Go Team">
+  <meta http-equiv="Content-Language" content="en">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fast Grab & Go">
+  <meta property="og:description" content="Fresh food, fast deals. Discover today’s limited-time offers.">
+  <meta property="og:image" content="https://fastgrab.com/assets/og-banner.jpg">
+  <meta property="og:url" content="https://fastgrab.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fast Grab & Go">
+  <meta name="twitter:description" content="Quick meals. Flash deals. Fast Grab & Go delivers value every day.">
+  <meta name="twitter:image" content="https://fastgrab.com/assets/twitter-banner.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Fast Grab & Go",
+    "image": "https://fastgrab.com/assets/logo.png",
+    "url": "https://fastgrab.com",
+    "telephone": "+1234567890",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Grab Avenue",
+      "addressLocality": "Grabtown",
+      "addressRegion": "GT",
+      "postalCode": "12345",
+      "addressCountry": "ZA"
+    },
+    "priceRange": "$",
+    "servesCuisine": ["Fast Food", "Street Food", "South African"],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "10:00",
+        "closes": "20:00"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Header Section -->
@@ -13,89 +67,89 @@
       <h1>Fast Grab and Go</h1>
       <p>Your quick and easy food destination!</p>
     </div>
+
     <!-- Countdown Timer Section -->
-<div id="deal-section">
-  <h2>🔥 Flash Deal: <span class="highlight">20% Off All Drinks</span></h2>
-  <p class="subtext">Hurry! Offer ends in:</p>
-  <div id="countdown"></div>
-</div>
+    <div id="deal-section">
+      <h2>🔥 Flash Deal: <span class="highlight">20% Off All Drinks</span></h2>
+      <p class="subtext">Hurry! Offer ends in:</p>
+      <div id="countdown"></div>
+    </div>
 
-<!-- Styles -->
-<style>
-  #deal-section {
-    max-width: 500px;
-    margin: 30px auto;
-    background: linear-gradient(to right, #ff7300, #fcb045);
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    font-family: 'Segoe UI', sans-serif;
-  }
+    <!-- Styles -->
+    <style>
+      #deal-section {
+        max-width: 500px;
+        margin: 30px auto;
+        background: linear-gradient(to right, #ff7300, #fcb045);
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        font-family: 'Segoe UI', sans-serif;
+      }
 
-  #deal-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
+      #deal-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
 
-  .highlight {
-    background-color: #fff;
-    color: #ff7300;
-    padding: 2px 8px;
-    border-radius: 8px;
-    font-weight: bold;
-  }
+      .highlight {
+        background-color: #fff;
+        color: #ff7300;
+        padding: 2px 8px;
+        border-radius: 8px;
+        font-weight: bold;
+      }
 
-  .subtext {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
+      .subtext {
+        font-size: 1rem;
+        margin-bottom: 15px;
+      }
 
-  #countdown {
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 12px 24px;
-    border-radius: 12px;
-    display: inline-block;
-  }
+      #countdown {
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 12px 24px;
+        border-radius: 12px;
+        display: inline-block;
+      }
 
-  @media (max-width: 500px) {
-    #deal-section {
-      padding: 20px 10px;
-    }
+      @media (max-width: 500px) {
+        #deal-section {
+          padding: 20px 10px;
+        }
 
-    #countdown {
-      font-size: 1.5rem;
-    }
-  }
-</style>
+        #countdown {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
 
-<!-- JavaScript -->
-<script>
-  const deadline = new Date(Date.now() + 2 * 60 * 60 * 1000).getTime(); // 2 hours
-  const countdownEl = document.getElementById("countdown");
+    <!-- JavaScript -->
+    <script>
+      const deadline = new Date(Date.now() + 2 * 60 * 60 * 1000).getTime(); // 2 hours
+      const countdownEl = document.getElementById("countdown");
 
-  const x = setInterval(function () {
-    const now = new Date().getTime();
-    const distance = deadline - now;
+      const x = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = deadline - now;
 
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    countdownEl.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+        countdownEl.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
 
-    if (distance < 0) {
-      clearInterval(x);
-      countdownEl.innerHTML = "EXPIRED";
-      document.getElementById("deal-section").style.opacity = 0.5;
-    }
-  }, 1000);
-</script>
-
+        if (distance < 0) {
+          clearInterval(x);
+          countdownEl.innerHTML = "EXPIRED";
+          document.getElementById("deal-section").style.opacity = 0.5;
+        }
+      }, 1000);
+    </script>
 
     <nav>
       <ul>
@@ -128,10 +182,11 @@
 
   <!-- Footer Section -->
   <footer>
-    <p>&copy; 2025 Fast Grab and Go. All Rights Reserved.</p>
+    <p>&copy; 2025 Fast Grab and Go. All Rights Reserved.</p> 
   </footer>
 </body>
 </html>
+
 
 
 
